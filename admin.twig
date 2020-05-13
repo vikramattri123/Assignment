@@ -1,0 +1,24 @@
+<html>
+<style>
+.space
+{
+    text-align:center;
+}
+</style>
+<body>
+<div class="space">
+<h1>Admin Page</h1>
+<form method="post" action="/">
+Username :<input type="text" name="name" value="{{name}}"><br><center><br><br>
+{% if(error.name)%}
+<p>{{error.name.msg}}</p>
+{%endif%}
+Password: <input type="password" name="password" value="{{password}}"><br><br>
+{% if(error.password)%}
+<p>{{error.password.msg}}</p>
+{%endif%}
+<input type="submit" value="submit">
+</div>
+</form>
+<body>
+</html>
